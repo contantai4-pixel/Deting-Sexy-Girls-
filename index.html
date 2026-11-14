@@ -1,12 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Join Free Chatting & Connect</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -16,134 +21,208 @@
         .glass-card {
             background: rgba(17, 24, 39, 0.85);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .glow-green {
             box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
         }
     </style>
+
     <!-- Popunder Ad Code -->
     <script data-cfasync="false" src="https://ahuramazda.org/1/b1360b722303538ad3b7034d8b4964fe"></script>
     <!-- Social Bar Ad Code -->
     <script async="async" data-cfasync="false" src="https://brijmohan.org/21/03ca7dbe75dfad86d15e39dfe8ca897c"></script>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-between p-4 sm:p-6">
+<body class="relative min-h-[100dvh] w-full overflow-x-hidden flex flex-col items-center justify-between p-3 sm:p-6 lg:p-8 selection:bg-emerald-500 selection:text-white">
 
-    <!-- Top Social Bar Container -->
+    <!-- Ambient Background Glows -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[90vw] max-w-3xl h-64 bg-emerald-500/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-10 right-0 w-80 h-80 bg-green-500/10 blur-[130px] rounded-full"></div>
+    </div>
+
+    <!-- Social Bar Container -->
     <div id="container-03ca7dbe75dfad86d15e39dfe8ca897c"></div>
 
-    <div class="w-full max-w-md mx-auto flex flex-col items-center space-y-6">
+    <!-- Main Full-Screen Responsive Wrapper -->
+    <div class="w-full max-w-md md:max-w-2xl lg:max-w-4xl mx-auto flex flex-col items-center space-y-5 sm:space-y-6 flex-1">
 
         <!-- Top Header -->
-        <header class="text-center space-y-2 mt-4">
-            <h1 class="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">
+        <header class="text-center space-y-2 mt-2 sm:mt-4">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500 tracking-tight">
                 Join Free Chatting Groups
             </h1>
             <p class="text-xs sm:text-sm text-gray-400 font-medium">
-                Video Call • Audio Call • Chatting — online now
+                Video Call • Audio Call • Chatting — <span class="text-emerald-400 font-semibold">online now</span>
             </p>
         </header>
 
         <!-- Top Banner Ad (320x50) -->
-        <div class="w-full flex justify-center my-2">
-            <script>
-              atOptions = {
-                'key' : '98897758792a799f9bc2570d5f430ef4',
-                'format' : 'iframe',
-                'height' : 50,
-                'width' : 320,
-                'params' : {}
-              };
-            </script>
-            <script src="https://brijmohan.org/22/98897758792a799f9bc2570d5f430ef4"></script>
+        <div class="w-full flex justify-center my-1">
+            <div class="min-h-[50px] min-w-[320px] flex items-center justify-center rounded-xl bg-gray-900/50 border border-white/5 overflow-hidden">
+                <script>
+                  atOptions = {
+                    'key' : '98897758792a799f9bc2570d5f430ef4',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://brijmohan.org/22/98897758792a799f9bc2570d5f430ef4"></script>
+            </div>
         </div>
 
-        <!-- Profiles Container (2-Column Grid) -->
-        <div class="w-full grid grid-cols-2 gap-3 sm:gap-4">
+        <!-- Profiles Container (Strict 2-Column Grid across Mobile & Desktop for Paired Symmetry) -->
+        <main class="w-full grid grid-cols-2 gap-3 sm:gap-5 lg:gap-6">
 
             <!-- Profile 1: Melisa H. Armstrong -->
-            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3 flex flex-col items-center text-center transition transform hover:scale-[1.02] shadow-lg">
-                <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
-                    <img src="https://i.postimg.cc/jCzz29kJ/melisa.jpg" alt="Melisa H. Armstrong" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80'">
-                    <span class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/jCzz29kJ/melisa.jpg" alt="Melisa H. Armstrong" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
                 </div>
-                <h2 class="text-xs sm:text-sm font-bold text-white truncate w-full">Melisa H. Armstrong</h2>
-                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">Austin, TX, USA</p>
-                <span class="mt-3 w-full py-1.5 px-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-[11px] sm:text-xs font-semibold rounded-xl shadow-md transition">
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Melisa H. Armstrong</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 Austin, TX, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">18.9K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">2.4K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">5.0</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
                     Chatting
                 </span>
             </a>
 
             <!-- Profile 2: Jill M. Bellino -->
-            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3 flex flex-col items-center text-center transition transform hover:scale-[1.02] shadow-lg">
-                <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
-                    <img src="https://i.postimg.cc/ppskV4pB/jill.jpg" alt="Jill M. Bellino" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80'">
-                    <span class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/ppskV4pB/jill.jpg" alt="Jill M. Bellino" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
                 </div>
-                <h2 class="text-xs sm:text-sm font-bold text-white truncate w-full">Jill M. Bellino</h2>
-                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">New York, NY, USA</p>
-                <span class="mt-3 w-full py-1.5 px-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-[11px] sm:text-xs font-semibold rounded-xl shadow-md transition">
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Jill M. Bellino</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 New York, NY, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">15.4K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">1.9K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">4.9</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
                     Chatting
                 </span>
             </a>
 
             <!-- Profile 3: Maria S. Welliver -->
-            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3 flex flex-col items-center text-center transition transform hover:scale-[1.02] shadow-lg">
-                <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
-                    <img src="https://i.postimg.cc/ykpXCRbf/maria.jpg" alt="Maria S. Welliver" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=80'">
-                    <span class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/ykpXCRbf/maria.jpg" alt="Maria S. Welliver" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
                 </div>
-                <h2 class="text-xs sm:text-sm font-bold text-white truncate w-full">Maria S. Welliver</h2>
-                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">Miami, FL, USA</p>
-                <span class="mt-3 w-full py-1.5 px-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-[11px] sm:text-xs font-semibold rounded-xl shadow-md transition">
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Maria S. Welliver</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 Miami, FL, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">22.1K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">3.2K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">5.0</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
                     Chatting
                 </span>
             </a>
 
             <!-- Profile 4: Priscilla K. Bernier -->
-            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3 flex flex-col items-center text-center transition transform hover:scale-[1.02] shadow-lg">
-                <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
-                    <img src="https://i.postimg.cc/xJPMxNmG/priscilla.jpg" alt="Priscilla K. Bernier" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&auto=format&fit=crop&q=80'">
-                    <span class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/xJPMxNmG/priscilla.jpg" alt="Priscilla K. Bernier" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
                 </div>
-                <h2 class="text-xs sm:text-sm font-bold text-white truncate w-full">Priscilla K. Bernier</h2>
-                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">Chicago, IL, USA</p>
-                <span class="mt-3 w-full py-1.5 px-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-[11px] sm:text-xs font-semibold rounded-xl shadow-md transition">
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Priscilla K. Bernier</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 Chicago, IL, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">16.8K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">2.1K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">4.9</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
                     Chatting
                 </span>
             </a>
 
-            <!-- Profile 5: Sophia Martinez -->
-            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3 flex flex-col items-center text-center transition transform hover:scale-[1.02] shadow-lg col-span-2 max-w-[50%] mx-auto">
-                <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
-                    <img src="https://i.postimg.cc/0MZKdRgV/sophia.jpg" alt="Sophia Martinez" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80'">
-                    <span class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+            <!-- Profile 5: Sophia Martinez (Left side of 3rd row) -->
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/0MZKdRgV/sophia.jpg" alt="Sophia Martinez" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
                 </div>
-                <h2 class="text-xs sm:text-sm font-bold text-white truncate w-full">Sophia Martinez</h2>
-                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">Los Angeles, CA, USA</p>
-                <span class="mt-3 w-full py-1.5 px-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-[11px] sm:text-xs font-semibold rounded-xl shadow-md transition">
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Sophia Martinez</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 Los Angeles, CA, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">19.3K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">2.7K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">5.0</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
                     Chatting
                 </span>
             </a>
 
-        </div>
+            <!-- Profile 6: Cora T. Osman (Right side of 3rd row) -->
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/6TqsCySX/cora.jpg" alt="Cora T. Osman" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+                </div>
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Cora T. Osman</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 Seattle, WA, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">17.6K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">2.3K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">4.9</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
+                    Chatting
+                </span>
+            </a>
+
+            <!-- Profile 7: Kathryn R. Dolan (Centered last odd card) -->
+            <a href="https://auctionr.org/4/2d7af423f3a29a9980920fc5e59c2193" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center transition duration-300 transform hover:scale-[1.02] hover:border-emerald-500/40 shadow-lg col-span-2 max-w-[50%] w-full mx-auto">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-2.5">
+                    <img src="https://i.postimg.cc/MMZCPTpv/kathryn.jpg" alt="Kathryn R. Dolan" class="w-full h-full object-cover rounded-full border-2 border-emerald-500 glow-green bg-gray-900" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&auto=format&fit=crop&q=80';">
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+                </div>
+                <h2 class="text-xs sm:text-base lg:text-lg font-bold text-white truncate w-full">Kathryn R. Dolan</h2>
+                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 truncate w-full">🇺🇸 Boston, MA, USA</p>
+                <div class="w-full grid grid-cols-3 gap-1 bg-gray-950/60 border border-white/5 rounded-xl py-1.5 px-1 mt-2.5 text-[10px] sm:text-xs">
+                    <div><span class="block font-bold text-white">20.5K</span><span class="text-[9px] text-gray-400">Members</span></div>
+                    <div class="border-x border-white/5"><span class="block font-bold text-emerald-400">2.9K</span><span class="text-[9px] text-gray-400">Online</span></div>
+                    <div><span class="block font-bold text-amber-400">5.0</span><span class="text-[9px] text-gray-400">Rating</span></div>
+                </div>
+                <span class="mt-3 w-full py-2 px-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-md transition">
+                    Chatting
+                </span>
+            </a>
+
+        </main>
 
         <!-- Middle Banner Ad (300x250) -->
         <div class="w-full flex justify-center my-4">
-            <script>
-              atOptions = {
-                'key' : '35ff6458959a9eeb1c298262339118e1',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-              };
-            </script>
-            <script src="https://brijmohan.org/22/35ff6458959a9eeb1c298262339118e1"></script>
+            <div class="min-h-[250px] min-w-[300px] flex items-center justify-center rounded-2xl bg-gray-900/50 border border-white/5 p-1.5 shadow-xl">
+                <script>
+                  atOptions = {
+                    'key' : '35ff6458959a9eeb1c298262339118e1',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://brijmohan.org/22/35ff6458959a9eeb1c298262339118e1"></script>
+            </div>
         </div>
 
         <!-- Footer -->
-        <footer class="text-center text-xs text-gray-500 py-4">
+        <footer class="text-center text-xs text-gray-500 py-4 mt-auto">
             &copy; 2026 Free Chatting Groups. All rights reserved.
         </footer>
 
@@ -151,3 +230,4 @@
 
 </body>
 </html>
+```
