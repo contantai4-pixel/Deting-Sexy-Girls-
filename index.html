@@ -1,13 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Free Chatting & Connect</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Plus Jakarta Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -26,7 +23,6 @@
         .glass-card {
             background: linear-gradient(145deg, rgba(22, 30, 50, 0.92), rgba(11, 16, 28, 0.96));
             backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
             border: 1px solid rgba(255, 255, 255, 0.09);
             box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.75);
         }
@@ -50,7 +46,6 @@
             max-width: 100% !important;
             margin: 0 !important;
         }
-        /* Custom Scrollbar for Chat */
         #chatMessages::-webkit-scrollbar {
             width: 5px;
         }
@@ -92,9 +87,9 @@
             <script src="https://brijmohan.org/22/98897758792a799f9bc2570d5f430ef4"></script>
         </div>
 
-        <!-- Profiles Grid: 2 Columns on Mobile, 3 on Tablet, 4 on Desktop -->
+        <!-- Profiles Grid -->
         <section id="profilesGrid" aria-label="Active Profiles" class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
-            <!-- Profiles rendered dynamically via JS -->
+            <!-- Rendered dynamically via JS -->
         </section>
 
         <!-- Below Profiles: 300x250 Banner Ad -->
@@ -113,7 +108,7 @@
             </div>
         </div>
 
-        <!-- Bottom Native Banner (2-Column Side-by-Side Layout) -->
+        <!-- Bottom Native Banner -->
         <div class="w-full max-w-3xl mx-auto my-4 p-3 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
             <script async="async" data-cfasync="false" src="https://brijmohan.org/21/03ca7dbe75dfad86d15e39dfe8ca897c"></script>
             <div id="container-03ca7dbe75dfad86d15e39dfe8ca897c"></div>
@@ -126,14 +121,13 @@
         &copy; 2026 Free Chatting Groups. All rights reserved.
     </footer>
 
-    <!-- Realistic Messenger / WhatsApp Style Chat Modal -->
+    <!-- Chat Modal -->
     <div id="chatModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-0 sm:p-4">
         <div class="w-full h-[100dvh] sm:h-[620px] sm:max-w-md bg-[#0d1322] sm:rounded-3xl border border-white/10 shadow-2xl flex flex-col overflow-hidden">
             
-            <!-- Chat Header -->
             <div class="px-4 py-3 bg-[#131b2e] border-b border-white/10 flex items-center justify-between shrink-0">
                 <div class="flex items-center gap-3 min-w-0">
-                    <button type="button" onclick="closeChatModal()" class="p-1.5 rounded-full hover:bg-white/10 text-slate-300 transition" aria-label="Back">
+                    <button onclick="closeChatModal()" class="p-1.5 rounded-full hover:bg-white/10 text-slate-300 transition" aria-label="Back">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
                         </svg>
@@ -150,14 +144,13 @@
                     </div>
                 </div>
 
-                <!-- Audio & Video Call Buttons -->
                 <div class="flex items-center gap-1.5 shrink-0">
-                    <button type="button" onclick="triggerCallDirectLink()" class="p-2.5 rounded-full bg-white/[0.06] hover:bg-emerald-500/20 text-emerald-400 transition" title="Audio Call">
+                    <button onclick="triggerCallDirectLink()" class="p-2.5 rounded-full bg-white/[0.06] hover:bg-emerald-500/20 text-emerald-400 transition" title="Audio Call">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
                         </svg>
                     </button>
-                    <button type="button" onclick="triggerCallDirectLink()" class="p-2.5 rounded-full bg-white/[0.06] hover:bg-emerald-500/20 text-emerald-400 transition" title="Video Call">
+                    <button onclick="triggerCallDirectLink()" class="p-2.5 rounded-full bg-white/[0.06] hover:bg-emerald-500/20 text-emerald-400 transition" title="Video Call">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
                         </svg>
@@ -165,17 +158,12 @@
                 </div>
             </div>
 
-            <!-- Chat Messages Area -->
-            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-[#090e1a]">
-                <!-- Messages injected dynamically per profile -->
-            </div>
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-[#090e1a]"></div>
 
-            <!-- Typing Indicator -->
             <div id="typingIndicator" class="hidden px-4 py-1.5 bg-[#090e1a] text-xs text-emerald-400 italic">
                 Typing...
             </div>
 
-            <!-- Message Input & Send Area -->
             <div class="p-3 bg-[#131b2e] border-t border-white/10 flex items-center gap-2 shrink-0">
                 <input 
                     id="chatInput" 
@@ -202,13 +190,24 @@
     <!-- Social Bar Ad Code -->
     <script data-cfasync="false" src="https://brijmohan.org/14/adfeb51d1deda85164ee04a8f5419354"></script>
 
-    <!-- Per-Profile Independent Direct-Link & Realistic Chat Script -->
+    <!-- Interactive Script -->
     <script>
         const DIRECT_LINK = "https://auctionr.org/4/e5690cdbd4a76539aec86a298eeac786";
 
         const profiles = [
             {
                 id: 1,
+                name: "Sopiya Luna",
+                location: "Los Angeles, CA, USA",
+                avatar: "https://i.postimg.cc/0MZKdRgV/sophia.jpg",
+                fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&auto=format&fit=crop&q=80",
+                members: "19.5K",
+                online: "2.7K",
+                rating: "5.0",
+                greeting: "Hey! What's up? I'm online now if you want to chat 💬"
+            },
+            {
+                id: 2,
                 name: "Melisa H. Armstrong",
                 location: "Austin, TX, USA",
                 avatar: "https://i.postimg.cc/jCzz29kJ/melisa.jpg",
@@ -219,7 +218,7 @@
                 greeting: "Hey! Glad you joined 😊 Where are you texting from?"
             },
             {
-                id: 2,
+                id: 3,
                 name: "Jill M. Bellino",
                 location: "New York, NY, USA",
                 avatar: "https://i.postimg.cc/ppskV4pB/jill.jpg",
@@ -230,7 +229,7 @@
                 greeting: "Hi there! I'm free to chat right now. How's your day going?"
             },
             {
-                id: 3,
+                id: 4,
                 name: "Maria S. Welliver",
                 location: "Miami, FL, USA",
                 avatar: "https://i.postimg.cc/ykpXCRbf/maria.jpg",
@@ -241,7 +240,7 @@
                 greeting: "Hello! Saw you online. Want to talk or do a quick call?"
             },
             {
-                id: 4,
+                id: 5,
                 name: "Priscilla K. Bernier",
                 location: "Chicago, IL, USA",
                 avatar: "https://i.postimg.cc/xJPMxNmG/priscilla.jpg",
@@ -252,18 +251,18 @@
                 greeting: "Hey! Thanks for messaging me. Say hi! 👋"
             },
             {
-                id: 5,
-                name: "Sophia Martinez",
-                location: "Los Angeles, CA, USA",
-                avatar: "https://i.postimg.cc/0MZKdRgV/sophia.jpg",
-                fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&auto=format&fit=crop&q=80",
-                members: "19.5K",
-                online: "2.7K",
+                id: 6,
+                name: "Mary D. Robinson",
+                location: "Dallas, TX, USA",
+                avatar: "https://i.postimg.cc/5Ywxz5Ms/mary.jpg",
+                fallback: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=240&auto=format&fit=crop&q=80",
+                members: "20.1K",
+                online: "2.9K",
                 rating: "5.0",
-                greeting: "Hey! What's up? I'm online now if you want to chat 💬"
+                greeting: "Hello! I'm active right now. Send a text whenever you're ready 😊"
             },
             {
-                id: 6,
+                id: 7,
                 name: "Cora T. Osman",
                 location: "Houston, TX, USA",
                 avatar: "https://i.postimg.cc/6TqsCySX/cora.jpg",
@@ -274,7 +273,7 @@
                 greeting: "Hi! Nice to meet you here. Drop me a message!"
             },
             {
-                id: 7,
+                id: 8,
                 name: "Kathryn R. Dolan",
                 location: "Phoenix, AZ, USA",
                 avatar: "https://i.postimg.cc/MMZCPTpv/kathryn.jpg",
@@ -283,17 +282,6 @@
                 online: "2.0K",
                 rating: "5.0",
                 greeting: "Hey there! Looking for someone fun to talk to?"
-            },
-            {
-                id: 8,
-                name: "Mary D. Robinson",
-                location: "Dallas, TX, USA",
-                avatar: "https://i.postimg.cc/5Ywxz5Ms/mary.jpg",
-                fallback: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=240&auto=format&fit=crop&q=80",
-                members: "20.1K",
-                online: "2.9K",
-                rating: "5.0",
-                greeting: "Hello! I'm active right now. Send a text whenever you're ready 😊"
             },
             {
                 id: 9,
@@ -309,49 +297,39 @@
             {
                 id: 10,
                 name: "Lynda M. Bridwell",
-                location: "Denver, CO, USA",
+                location: "San Diego, CA, USA",
                 avatar: "https://i.postimg.cc/WDRHv9N3/lynda.jpg",
-                fallback: "https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=240&auto=format&fit=crop&q=80",
-                members: "18.4K",
-                online: "2.5K",
-                rating: "5.0",
-                greeting: "Hey there! Glad you stopped by 😊 Want to chat for a bit?"
+                fallback: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=240&auto=format&fit=crop&q=80",
+                members: "18.1K",
+                online: "2.3K",
+                rating: "4.9",
+                greeting: "Hello there! Good to see you here 😊"
             },
             {
                 id: 11,
                 name: "Jennifer P. Parker",
-                location: "Boston, MA, USA",
+                location: "Las Vegas, NV, USA",
                 avatar: "https://i.postimg.cc/BPvhgkgJ/jennifer.jpg",
-                fallback: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=240&auto=format&fit=crop&q=80",
+                fallback: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=240&auto=format&fit=crop&q=80",
                 members: "19.2K",
-                online: "2.8K",
-                rating: "4.9",
-                greeting: "Hi! I'm online right now. Say hi whenever you're ready 💬"
+                online: "2.6K",
+                rating: "5.0",
+                greeting: "Hi! Let's chat and have some fun 💬"
             }
         ];
 
-        // Individual Per-Profile State Trackers
-        const profileClickedMap = {};
-        const inputClickedMap = {};
-        const sendClickedMap = {};
-        const profileMessagesMap = {};
-
-        profiles.forEach(p => {
-            profileClickedMap[p.id] = false;
-            inputClickedMap[p.id] = false;
-            sendClickedMap[p.id] = false;
-            profileMessagesMap[p.id] = null;
-        });
-
+        const profileClicks = {};
         let currentProfile = null;
+        let inputFirstClickDone = false;
+        let sendFirstClickDone = false;
 
         function openDirectLink() {
             window.open(DIRECT_LINK, "_blank", "noopener,noreferrer");
         }
 
-        // Render Profiles Grid
         const grid = document.getElementById("profilesGrid");
         profiles.forEach((p, idx) => {
+            profileClicks[p.id] = 0;
             const isLastOdd = (profiles.length % 2 !== 0) && (idx === profiles.length - 1);
             const card = document.createElement("div");
             card.className = `glass-card cursor-pointer rounded-2xl p-3 sm:p-4 flex flex-col items-center text-center transition-all duration-200 hover:-translate-y-1 ${isLastOdd ? 'col-span-2 md:col-span-1 max-w-[48%] md:max-w-full mx-auto w-full' : ''}`;
@@ -385,10 +363,9 @@
             grid.appendChild(card);
         });
 
-        // Step 1 (Per Profile): 1st click on THIS specific profile -> Direct Link; 2nd click on THIS profile -> Open its Chat Modal
         function handleProfileClick(profile) {
-            if (!profileClickedMap[profile.id]) {
-                profileClickedMap[profile.id] = true;
+            profileClicks[profile.id]++;
+            if (profileClicks[profile.id] === 1) {
                 openDirectLink();
                 return;
             }
@@ -397,34 +374,30 @@
 
         function openChatModal(profile) {
             currentProfile = profile;
+            inputFirstClickDone = false;
+            sendFirstClickDone = false;
 
             document.getElementById("chatAvatar").src = profile.avatar;
             document.getElementById("chatAvatar").onerror = function() { this.src = profile.fallback; };
             document.getElementById("chatName").textContent = profile.name;
-            document.getElementById("typingIndicator").classList.add("hidden");
 
             const messagesBox = document.getElementById("chatMessages");
+            const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-            if (!profileMessagesMap[profile.id]) {
-                const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                profileMessagesMap[profile.id] = `
-                    <div class="text-center my-2">
-                        <span class="text-[10px] text-slate-400 bg-white/5 px-3 py-1 rounded-full">
-                            Connected with ${profile.name} • ${profile.location}
-                        </span>
+            messagesBox.innerHTML = `
+                <div class="text-center my-2">
+                    <span class="text-[10px] text-slate-400 bg-white/5 px-3 py-1 rounded-full">
+                        Connected with ${profile.name} • ${profile.location}
+                    </span>
+                </div>
+                <div class="flex items-end gap-2 max-w-[82%]">
+                    <img src="${profile.avatar}" onerror="this.src='${profile.fallback}'" class="w-7 h-7 rounded-full object-cover shrink-0">
+                    <div class="bg-[#182238] text-slate-100 text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl rounded-bl-none border border-white/5 shadow">
+                        <p>${profile.greeting}</p>
+                        <span class="block text-[9px] text-slate-400 mt-1 text-right">${nowTime}</span>
                     </div>
-                    <div class="flex items-end gap-2 max-w-[82%]">
-                        <img src="${profile.avatar}" onerror="this.src='${profile.fallback}'" class="w-7 h-7 rounded-full object-cover shrink-0">
-                        <div class="bg-[#182238] text-slate-100 text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl rounded-bl-none border border-white/5 shadow">
-                            <p>${profile.greeting}</p>
-                            <span class="block text-[9px] text-slate-400 mt-1 text-right">${nowTime}</span>
-                        </div>
-                    </div>
-                `;
-            }
-
-            messagesBox.innerHTML = profileMessagesMap[profile.id];
-            messagesBox.scrollTop = messagesBox.scrollHeight;
+                </div>
+            `;
 
             document.getElementById("chatInput").value = "";
             document.getElementById("chatModal").classList.remove("hidden");
@@ -432,27 +405,22 @@
 
         function closeChatModal() {
             document.getElementById("chatModal").classList.add("hidden");
-            currentProfile = null;
         }
 
-        // Audio Call & Video Call -> Always opens Direct Link
         function triggerCallDirectLink() {
             openDirectLink();
         }
 
-        // Step 2 (Per Profile): 1st click/tap on Input Box inside this profile's chat -> Direct Link; 2nd click -> Allow typing
         const chatInput = document.getElementById("chatInput");
         chatInput.addEventListener("pointerdown", (e) => {
-            if (!currentProfile) return;
-            if (!inputClickedMap[currentProfile.id]) {
+            if (!inputFirstClickDone) {
                 e.preventDefault();
                 chatInput.blur();
-                inputClickedMap[currentProfile.id] = true;
+                inputFirstClickDone = true;
                 openDirectLink();
             }
         });
 
-        // Step 3 (Per Profile): 1st click on Send inside this profile's chat -> Direct Link; 2nd click -> Send message
         const chatSendBtn = document.getElementById("chatSendBtn");
         chatSendBtn.addEventListener("click", handleSendMessage);
         chatInput.addEventListener("keydown", (e) => {
@@ -463,13 +431,10 @@
         });
 
         function handleSendMessage() {
-            if (!currentProfile) return;
-            const activeProfile = currentProfile;
             const text = chatInput.value.trim();
-
             if (!text) {
-                if (!inputClickedMap[activeProfile.id]) {
-                    inputClickedMap[activeProfile.id] = true;
+                if (!inputFirstClickDone) {
+                    inputFirstClickDone = true;
                     openDirectLink();
                 } else {
                     chatInput.focus();
@@ -477,13 +442,12 @@
                 return;
             }
 
-            if (!sendClickedMap[activeProfile.id]) {
-                sendClickedMap[activeProfile.id] = true;
+            if (!sendFirstClickDone) {
+                sendFirstClickDone = true;
                 openDirectLink();
                 return;
             }
 
-            // Append User Sent Message
             const messagesBox = document.getElementById("chatMessages");
             const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
@@ -496,33 +460,27 @@
                 </div>
             `;
             messagesBox.appendChild(userBubble);
-            profileMessagesMap[activeProfile.id] = messagesBox.innerHTML;
             chatInput.value = "";
             messagesBox.scrollTop = messagesBox.scrollHeight;
 
-            // Realistic typing indicator + reply
             const typingEl = document.getElementById("typingIndicator");
-            typingEl.textContent = `${activeProfile.name} is typing...`;
+            typingEl.textContent = `${currentProfile.name} is typing...`;
             typingEl.classList.remove("hidden");
 
             setTimeout(() => {
                 typingEl.classList.add("hidden");
                 const replyTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                const replyHtml = `
-                    <div class="flex items-end gap-2 max-w-[82%]">
-                        <img src="${activeProfile.avatar}" onerror="this.src='${activeProfile.fallback}'" class="w-7 h-7 rounded-full object-cover shrink-0">
-                        <div class="bg-[#182238] text-slate-100 text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl rounded-bl-none border border-white/5 shadow">
-                            <p>Got your message! 😊 Give me just a minute, I'm finishing up something and will reply right back.</p>
-                            <span class="block text-[9px] text-slate-400 mt-1 text-right">${replyTime}</span>
-                        </div>
+                const replyBubble = document.createElement("div");
+                replyBubble.className = "flex items-end gap-2 max-w-[82%]";
+                replyBubble.innerHTML = `
+                    <img src="${currentProfile.avatar}" onerror="this.src='${currentProfile.fallback}'" class="w-7 h-7 rounded-full object-cover shrink-0">
+                    <div class="bg-[#182238] text-slate-100 text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl rounded-bl-none border border-white/5 shadow">
+                        <p>Got your message! 😊 Give me just a minute, I'm finishing up something and will reply right back.</p>
+                        <span class="block text-[9px] text-slate-400 mt-1 text-right">${replyTime}</span>
                     </div>
                 `;
-                profileMessagesMap[activeProfile.id] += replyHtml;
-
-                if (currentProfile && currentProfile.id === activeProfile.id) {
-                    messagesBox.innerHTML = profileMessagesMap[activeProfile.id];
-                    messagesBox.scrollTop = messagesBox.scrollHeight;
-                }
+                messagesBox.appendChild(replyBubble);
+                messagesBox.scrollTop = messagesBox.scrollHeight;
             }, 1300);
         }
 
@@ -541,4 +499,3 @@
 
 </body>
 </html>
-```
