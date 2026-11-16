@@ -305,18 +305,42 @@
                 online: "2.2K",
                 rating: "4.9",
                 greeting: "Hey! Glad you stopped by my profile. How are you?"
+            },
+            {
+                id: 10,
+                name: "Lynda M. Bridwell",
+                location: "Denver, CO, USA",
+                avatar: "https://i.postimg.cc/WDRHv9N3/lynda.jpg",
+                fallback: "https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=240&auto=format&fit=crop&q=80",
+                members: "18.4K",
+                online: "2.5K",
+                rating: "5.0",
+                greeting: "Hey there! Glad you stopped by 😊 Want to chat for a bit?"
+            },
+            {
+                id: 11,
+                name: "Jennifer P. Parker",
+                location: "Boston, MA, USA",
+                avatar: "https://i.postimg.cc/BPvhgkgJ/jennifer.jpg",
+                fallback: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=240&auto=format&fit=crop&q=80",
+                members: "19.2K",
+                online: "2.8K",
+                rating: "4.9",
+                greeting: "Hi! I'm online right now. Say hi whenever you're ready 💬"
             }
         ];
 
-        // Individual Per-Profile State Tracker (Each profile ID has its own independent 1st-click flags & message history)
-        const profileStates = {};
+        // Individual Per-Profile State Trackers
+        const profileClickedMap = {};
+        const inputClickedMap = {};
+        const sendClickedMap = {};
+        const profileMessagesMap = {};
+
         profiles.forEach(p => {
-            profileStates[p.id] = {
-                cardClickedOnce: false,
-                inputClickedOnce: false,
-                sendClickedOnce: false,
-                messagesHtml: null
-            };
+            profileClickedMap[p.id] = false;
+            inputClickedMap[p.id] = false;
+            sendClickedMap[p.id] = false;
+            profileMessagesMap[p.id] = null;
         });
 
         let currentProfile = null;
@@ -363,9 +387,8 @@
 
         // Step 1 (Per Profile): 1st click on THIS specific profile -> Direct Link; 2nd click on THIS profile -> Open its Chat Modal
         function handleProfileClick(profile) {
-            const state = profileStates[profile.id];
-            if (!state.cardClickedOnce) {
-                state.cardClickedOnce = true;
+            if (!profileClickedMap[profile.id]) {
+                profileClickedMap[profile.id] = true;
                 openDirectLink();
                 return;
             }
@@ -374,7 +397,6 @@
 
         function openChatModal(profile) {
             currentProfile = profile;
-            const state = profileStates[profile.id];
 
             document.getElementById("chatAvatar").src = profile.avatar;
             document.getElementById("chatAvatar").onerror = function() { this.src = profile.fallback; };
@@ -383,9 +405,9 @@
 
             const messagesBox = document.getElementById("chatMessages");
 
-            if (!state.messagesHtml) {
+            if (!profileMessagesMap[profile.id]) {
                 const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                state.messagesHtml = `
+                profileMessagesMap[profile.id] = `
                     <div class="text-center my-2">
                         <span class="text-[10px] text-slate-400 bg-white/5 px-3 py-1 rounded-full">
                             Connected with ${profile.name} • ${profile.location}
@@ -401,7 +423,7 @@
                 `;
             }
 
-            messagesBox.innerHTML = state.messagesHtml;
+            messagesBox.innerHTML = profileMessagesMap[profile.id];
             messagesBox.scrollTop = messagesBox.scrollHeight;
 
             document.getElementById("chatInput").value = "";
@@ -422,11 +444,10 @@
         const chatInput = document.getElementById("chatInput");
         chatInput.addEventListener("pointerdown", (e) => {
             if (!currentProfile) return;
-            const state = profileStates[currentProfile.id];
-            if (!state.inputClickedOnce) {
+            if (!inputClickedMap[currentProfile.id]) {
                 e.preventDefault();
                 chatInput.blur();
-                state.inputClickedOnce = true;
+                inputClickedMap[currentProfile.id] = true;
                 openDirectLink();
             }
         });
@@ -444,12 +465,11 @@
         function handleSendMessage() {
             if (!currentProfile) return;
             const activeProfile = currentProfile;
-            const state = profileStates[activeProfile.id];
             const text = chatInput.value.trim();
 
             if (!text) {
-                if (!state.inputClickedOnce) {
-                    state.inputClickedOnce = true;
+                if (!inputClickedMap[activeProfile.id]) {
+                    inputClickedMap[activeProfile.id] = true;
                     openDirectLink();
                 } else {
                     chatInput.focus();
@@ -457,8 +477,8 @@
                 return;
             }
 
-            if (!state.sendClickedOnce) {
-                state.sendClickedOnce = true;
+            if (!sendClickedMap[activeProfile.id]) {
+                sendClickedMap[activeProfile.id] = true;
                 openDirectLink();
                 return;
             }
@@ -476,7 +496,7 @@
                 </div>
             `;
             messagesBox.appendChild(userBubble);
-            state.messagesHtml = messagesBox.innerHTML;
+            profileMessagesMap[activeProfile.id] = messagesBox.innerHTML;
             chatInput.value = "";
             messagesBox.scrollTop = messagesBox.scrollHeight;
 
@@ -497,11 +517,10 @@
                         </div>
                     </div>
                 `;
-                state.messagesHtml += replyHtml;
+                profileMessagesMap[activeProfile.id] += replyHtml;
 
-                // Only update DOM immediately if user is still viewing this same profile's modal
                 if (currentProfile && currentProfile.id === activeProfile.id) {
-                    messagesBox.innerHTML = state.messagesHtml;
+                    messagesBox.innerHTML = profileMessagesMap[activeProfile.id];
                     messagesBox.scrollTop = messagesBox.scrollHeight;
                 }
             }, 1300);
